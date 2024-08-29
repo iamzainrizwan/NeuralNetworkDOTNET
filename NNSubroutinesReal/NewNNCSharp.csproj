@@ -1,0 +1,183 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{C8D88F8D-ADAC-49CB-9170-F1731A2BD287}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>NewNNCSharp</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\NNSubroutinesReal\DesignTimeBuild\.dtbcache.v2" />
+    <None Include=".vs\NNSubroutinesReal\FileContentIndex\11a89907-8ad8-468a-acf1-aea513d5cc17.vsidx" />
+    <None Include=".vs\NNSubroutinesReal\FileContentIndex\db30843c-1f9b-43fa-8d2a-5ead259a5f71.vsidx" />
+    <None Include=".vs\NNSubroutinesReal\v17\.futdcache.v2" />
+    <None Include=".vs\NNSubroutinesReal\v17\.suo" />
+    <None Include=".vs\NNSubroutinesReal\v17\DocumentLayout.json" />
+    <None Include=".vs\NNSubroutinesReal\v17\TestStore\0\000.testlog" />
+    <None Include=".vs\NNSubroutinesReal\v17\TestStore\0\testlog.manifest" />
+    <None Include=".vs\ProjectEvaluation\nnsubroutinesreal.metadata.v8.bin" />
+    <None Include=".vs\ProjectEvaluation\nnsubroutinesreal.projects.v8.bin" />
+    <None Include=".vs\ProjectEvaluation\nnsubroutinesreal.strings.v8.bin" />
+    <None Include="NNSubroutinesReal\bin\Debug\net8.0\NNSubroutinesReal.deps.json" />
+    <None Include="NNSubroutinesReal\bin\Debug\net8.0\NNSubroutinesReal.runtimeconfig.json" />
+    <None Include="NNSubroutinesReal\bin\x64\Debug\net8.0\NNSubroutinesReal.deps.json" />
+    <None Include="NNSubroutinesReal\bin\x64\Debug\net8.0\NNSubroutinesReal.runtimeconfig.json" />
+    <None Include="NNSubroutinesReal\bin\x86\Debug\net8.0\NNSubroutinesReal.deps.json" />
+    <None Include="NNSubroutinesReal\bin\x86\Debug\net8.0\NNSubroutinesReal.runtimeconfig.json" />
+    <None Include="NNSubroutinesReal\NNSubroutinesReal.csproj" />
+    <None Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubrou.6BE70160.Up2Date" />
+    <None Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.AssemblyInfoInputs.cache" />
+    <None Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.assets.cache" />
+    <None Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.csproj.AssemblyReference.cache" />
+    <None Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.csproj.BuildWithSkipAnalyzers" />
+    <None Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.csproj.CoreCompileInputs.cache" />
+    <None Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.genruntimeconfig.cache" />
+    <None Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.sourcelink.json" />
+    <None Include="NNSubroutinesReal\obj\NNSubroutinesReal.csproj.nuget.dgspec.json" />
+    <None Include="NNSubroutinesReal\obj\NNSubroutinesReal.csproj.nuget.g.props" />
+    <None Include="NNSubroutinesReal\obj\NNSubroutinesReal.csproj.nuget.g.targets" />
+    <None Include="NNSubroutinesReal\obj\project.assets.json" />
+    <None Include="NNSubroutinesReal\obj\project.nuget.cache" />
+    <None Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubrou.6BE70160.Up2Date" />
+    <None Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.AssemblyInfoInputs.cache" />
+    <None Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.assets.cache" />
+    <None Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.csproj.AssemblyReference.cache" />
+    <None Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.csproj.BuildWithSkipAnalyzers" />
+    <None Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.csproj.CoreCompileInputs.cache" />
+    <None Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.genruntimeconfig.cache" />
+    <None Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.sourcelink.json" />
+    <None Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubrou.6BE70160.Up2Date" />
+    <None Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.AssemblyInfoInputs.cache" />
+    <None Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.assets.cache" />
+    <None Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.csproj.AssemblyReference.cache" />
+    <None Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.csproj.BuildWithSkipAnalyzers" />
+    <None Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.csproj.CoreCompileInputs.cache" />
+    <None Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.genruntimeconfig.cache" />
+    <None Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.sourcelink.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NNSubroutinesReal\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.AssemblyInfo.cs" />
+    <Compile Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.GlobalUsings.g.cs" />
+    <Compile Include="NNSubroutinesReal\obj\x64\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.AssemblyInfo.cs" />
+    <Compile Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.GlobalUsings.g.cs" />
+    <Compile Include="NNSubroutinesReal\obj\x86\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.AssemblyInfo.cs" />
+    <Compile Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.GlobalUsings.g.cs" />
+    <Compile Include="NNSubroutinesReal\Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\Google.Protobuf.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\Keras.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\MethodBoundaryAspect.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\Newtonsoft.Json.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\NNSubroutinesReal.exe" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\NNSubroutinesReal.pdb" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\Numpy.Bare.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\NumSharp.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\OneOf.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\Protobuf.Text.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\Python.Runtime.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\Razorvine.Pickle.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\Serilog.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\Serilog.Sinks.Console.dll" />
+    <Content Include="NNSubroutinesReal\bin\Debug\net8.0\Tensorflow.Binding.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\Google.Protobuf.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\Keras.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\MethodBoundaryAspect.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\Newtonsoft.Json.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\NNSubroutinesReal.exe" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\NNSubroutinesReal.pdb" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\Numpy.Bare.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\NumSharp.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\OneOf.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\Protobuf.Text.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\Python.Runtime.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\Razorvine.Pickle.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\Serilog.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\Serilog.Sinks.Console.dll" />
+    <Content Include="NNSubroutinesReal\bin\x64\Debug\net8.0\Tensorflow.Binding.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\Google.Protobuf.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\Keras.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\MethodBoundaryAspect.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\Newtonsoft.Json.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\NNSubroutinesReal.exe" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\NNSubroutinesReal.pdb" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\Numpy.Bare.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\NumSharp.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\OneOf.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\Protobuf.Text.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\Python.Runtime.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\Razorvine.Pickle.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\Serilog.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\Serilog.Sinks.Console.dll" />
+    <Content Include="NNSubroutinesReal\bin\x86\Debug\net8.0\Tensorflow.Binding.dll" />
+    <Content Include="NNSubroutinesReal\obj\Debug\net8.0\apphost.exe" />
+    <Content Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.csproj.FileListAbsolute.txt" />
+    <Content Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\obj\Debug\net8.0\NNSubroutinesReal.pdb" />
+    <Content Include="NNSubroutinesReal\obj\Debug\net8.0\refint\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\obj\Debug\net8.0\ref\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\obj\x64\Debug\net8.0\apphost.exe" />
+    <Content Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.csproj.FileListAbsolute.txt" />
+    <Content Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\obj\x64\Debug\net8.0\NNSubroutinesReal.pdb" />
+    <Content Include="NNSubroutinesReal\obj\x64\Debug\net8.0\refint\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\obj\x64\Debug\net8.0\ref\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\obj\x86\Debug\net8.0\apphost.exe" />
+    <Content Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.csproj.FileListAbsolute.txt" />
+    <Content Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\obj\x86\Debug\net8.0\NNSubroutinesReal.pdb" />
+    <Content Include="NNSubroutinesReal\obj\x86\Debug\net8.0\refint\NNSubroutinesReal.dll" />
+    <Content Include="NNSubroutinesReal\obj\x86\Debug\net8.0\ref\NNSubroutinesReal.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\NewNNCSharp\v17\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
