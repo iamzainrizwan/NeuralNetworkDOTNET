@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zrizw\\source\\repos\\NNSubroutinesReal\\NNSubroutinesReal\\NNSubroutinesReal.csproj": {}
+    "c:\\.NEA\\cloneNN\\NeuralNetworkDOTNET\\NNSubroutinesReal\\NNSubroutinesReal\\NNSubroutinesReal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zrizw\\source\\repos\\NNSubroutinesReal\\NNSubroutinesReal\\NNSubroutinesReal.csproj": {
+    "c:\\.NEA\\cloneNN\\NeuralNetworkDOTNET\\NNSubroutinesReal\\NNSubroutinesReal\\NNSubroutinesReal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zrizw\\source\\repos\\NNSubroutinesReal\\NNSubroutinesReal\\NNSubroutinesReal.csproj",
+        "projectUniqueName": "c:\\.NEA\\cloneNN\\NeuralNetworkDOTNET\\NNSubroutinesReal\\NNSubroutinesReal\\NNSubroutinesReal.csproj",
         "projectName": "NNSubroutinesReal",
-        "projectPath": "C:\\Users\\zrizw\\source\\repos\\NNSubroutinesReal\\NNSubroutinesReal\\NNSubroutinesReal.csproj",
-        "packagesPath": "C:\\Users\\zrizw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zrizw\\source\\repos\\NNSubroutinesReal\\NNSubroutinesReal\\obj\\",
+        "projectPath": "c:\\.NEA\\cloneNN\\NeuralNetworkDOTNET\\NNSubroutinesReal\\NNSubroutinesReal\\NNSubroutinesReal.csproj",
+        "packagesPath": "C:\\Users\\iamza\\.nuget\\packages\\",
+        "outputPath": "c:\\.NEA\\cloneNN\\NeuralNetworkDOTNET\\NNSubroutinesReal\\NNSubroutinesReal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\zrizw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\iamza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

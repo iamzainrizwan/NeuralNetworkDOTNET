@@ -1,7 +1,4 @@
 ﻿using NumSharp;
-using Tensorflow;
-using Python.Runtime;
-using Keras;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,8 +10,9 @@ namespace NNSubroutinesReal
     {
         static void Main(string[] args)
         {
-            NDArray trainImagesArray;
-            NDArray trainLabelsArray;
+            NDArray x_train;
+            NDArray y_train;
+            /*
             Runtime.PythonDLL = @"C:\Users\zrizw\AppData\Local\Programs\Python\Python312\python312.dll";
             using (Py.GIL()) //load mnist using python
             {
@@ -25,6 +23,7 @@ namespace NNSubroutinesReal
                 trainLabelsArray.SetData(train_labels);
             }
             PythonEngine.Shutdown();
+            
             //recalibrate arrays for nn
             NDArray x_train = trainImagesArray.reshape((60000, 784));
             x_train = x_train.astype(np.float32) / 255;
@@ -33,10 +32,21 @@ namespace NNSubroutinesReal
             {
                 y_train[i, trainLabelsArray[i]] = 1;
             }
+            */
+
+            //create and print training data
+            x_train = np.array([[0,0],
+            [0,1],
+            [1,0],
+            [1,1]]);
+            y_train = np.array([0, 1, 1, 0]).reshape(4, 1);
+            Console.WriteLine(x_train.ToString());
+            Console.WriteLine(y_train.ToString());
+            
             //create and train model
-            CreateModel nn = new CreateModel(784, 10, [512, 512]);
-            nn.train(x_train, y_train, 100, 0.001f, 0.001f);
-            Console.ReadKey();
+            CreateModel nn = new CreateModel(2, 1, [2, 2]);
+            nn.train(x_train, y_train, 100, 0.1f, 0.001f);
+            Console.Read();
         }
     }
 
@@ -132,16 +142,21 @@ namespace NNSubroutinesReal
         public NDArray forward(NDArray X) //x is a layer input array to perform the forward pass on
         {
             x = X;
+
             //calculate the layer output z
             NDArray z = np.dot(x, weights) + biases;
+
             //apply activation functions to output
             if (activation == "relu")
             {
                 output = np.maximum(0, z);
-            } else if (activation == "softmax")
+            }
+            else if (activation == "softmax")
             {
                 NDArray exp_values = np.exp(z - np.max(z, -1, true));
-                output = exp_values/np.sum(exp_values, -1, true); //softmax 
+                output = exp_values / np.sum(exp_values, -1, true); //softmax 
+            } else if (activation == "tanh"){
+                output = np.tanh(z);
             }
 
             return output;
@@ -160,11 +175,12 @@ namespace NNSubroutinesReal
                     if (value > 0) { mask[i, j] = value; }
                 }
             }
+            //take derivatives of activation function
             if (activation == "relu")
             {
                 d_values = d_values * mask;
                 int NOFUCKINGWAY = 420;
-            } 
+            }
             else if (activation == "softmax")
             {
                 for (int i = 0; i < d_values.shape[0]; i++)
@@ -184,7 +200,9 @@ namespace NNSubroutinesReal
                     jacobian_matrix -= np.dot(gradient, gradient.T);
                     d_values[i] = np.dot(jacobian_matrix, output[i]);
                 }
-            }   
+            } else if (activation == "tanh"){
+                d_values = 1 - np.power(np.tanh(d_values), 2);
+            }
 
             //calculte derivatives wrt weight and bias
             d_weights = np.dot(x.T, d_values);
@@ -202,7 +220,7 @@ namespace NNSubroutinesReal
             biases -= learning_rate * d_biases;
 
             /* KILL ADAM */
-            //update weights using m and v values (Adam)
+            //update weights using m and v values (Adam)    
             m_weights = beta1 * m_weights + (1 - beta1) * d_weights;
             v_weights = beta2 * v_weights + (1 - beta2) * np.power(d_weights, 2);
             m_hat_weights = m_weights / (1 - np.power(beta1, t));
@@ -216,7 +234,7 @@ namespace NNSubroutinesReal
             v_hat_biases = v_biases / (1 - np.power(beta2, t));
             biases -= learning_rate * m_hat_biases / (np.sqrt(v_hat_biases) + epsilon);
             
-            
+
             return d_inputs;
         }
         static NDArray SumOverAxis0(NDArray array) //fine... i'll do it myself. implements np.sum(array, axis:0, keepDims = True).
@@ -259,13 +277,12 @@ namespace NNSubroutinesReal
             layer2 = new FCLayer(hidden_sizes[0], hidden_sizes[1], "relu");
             layer3 = new FCLayer(hidden_sizes[1], output_size, "relu");
         }
-        
-        public NDArray forward (NDArray inputs)
+
+        public NDArray forward(NDArray inputs)
         {
             NDArray output1 = layer1.forward(inputs);
             NDArray output2 = layer2.forward(output1);
             NDArray output3 = layer3.forward(output2);
-
             return output3;
         }
 
@@ -288,22 +305,33 @@ namespace NNSubroutinesReal
                 //calculate loss - MSE
                 double loss1 = np.mean(np.power((np.subtract(targets, output)), 2));
                 //calculate loss - Categorical Crossentropy
-                double epsilon = 1e-10;
+                double epsilon = 1e-12;
                 double loss2 = np.mean(targets * np.log(output + epsilon));
                 loss2 *= -1;
                 Console.Write("\n Loss1: " + loss1.ToString() + "\n");
                 Console.Write(" Loss2: " + loss2.ToString() + "\n");
 
                 //backwards pass
-                output_grad = 6 * (output - targets) / output.shape[0];
-                t++; 
+                //output_grad = 6 / output.shape[0] * (output - targets);
+                output = np.clip(output, epsilon, 1 - epsilon);
+                output_grad = (- (targets / output) + (1 - targets) / (1 - output)) / output.shape[0];
+                Console.WriteLine(output.ToString());
+                t++;
+                //update learning rate
                 learning_rate = initial_learning_rate / (1 + decay * epoch);
+                
+
+                if (epoch == 99){
+                    Console.WriteLine(layer1.weights.ToString());
+                    Console.WriteLine(layer2.weights.ToString());
+                    Console.WriteLine(layer3.weights.ToString());
+                }
                 grad_3 = layer3.backward(output_grad, learning_rate, t);
-                grad_2 = layer2.backward(grad_3, learning_rate, t); 
+                grad_2 = layer2.backward(grad_3, learning_rate, t);
                 grad_1 = layer1.backward(grad_2, learning_rate, t);
             }
         }
     }
 
-    
+
 }
